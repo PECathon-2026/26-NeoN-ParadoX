@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>PrivacyLens</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <main>
+    <header class="top"><div class="logo">◌</div><div><strong>PrivacyLens</strong><small>Local agent guard</small></div><span class="live">LOCAL</span></header>
+    <section class="hero"><span>PASTEL PRIVACY LAYER</span><h1>See the task.<br><em>Keep secrets private.</em></h1><p>Scan the active page, sanitize sensitive values locally, and check proposed agent actions before they leave the boundary.</p></section>
+    <button id="scan" class="primary">Scan active page</button>
+    <label for="context">Page/task context</label>
+    <textarea id="context" placeholder="Scan the active page or paste context here…"></textarea>
+    <div class="row"><div><span class="metric-label">Findings</span><strong id="count">—</strong></div><div><span class="metric-label">Boundary</span><strong class="safe">Local only</strong></div></div>
+    <section class="panel"><div class="panel-title">Sanitized context</div><pre id="sanitized">Nothing scanned yet.</pre><div id="chips" class="chips"></div></section>
+    <section class="panel"><div class="panel-title">Action safety gate</div>
+      <input id="task" value="Complete the task">
+      <div class="action-row"><select id="actionType"><option>click</option><option>type</option><option>navigate</option><option>scroll</option><option>submit</option></select><input id="target" placeholder="Target, e.g. Pay now"></div>
+      <button id="check" class="secondary">Check proposed action</button><div id="decision" class="decision">Awaiting sanitized context.</div>
+    </section>
+    <p class="hint">Start the local server with <code>python app.py</code> before using the extension.</p>
+  </main>
+  <script src="popup.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "PrivacyLens Local Guard",
+  "version": "1.0.0",
+  "description": "Pattern-first privacy firewall for AI browser agents.",
+  "permissions": ["activeTab", "scripting", "storage"],
+  "host_permissions": [
+    "http://127.0.0.1:8765/*",
+    "http://localhost:8765/*"
+  ],
+  "action": {
+    "default_title": "PrivacyLens",
+    "default_popup": "popup.html"
+  }
+}
+

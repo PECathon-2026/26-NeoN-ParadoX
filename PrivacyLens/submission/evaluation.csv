@@ -1,0 +1,6 @@
+scenario,expected,detected,precision,recall,sanitized_allowed,raw_blocked
+E-commerce checkout,2,2,1.0,1.0,True,True
+Authentication,3,3,1.0,1.0,True,True
+Customer support,1,1,1.0,1.0,True,True
+Video conferencing,2,2,1.0,1.0,True,True
+Developer settings,2,2,1.0,1.0,True,True
